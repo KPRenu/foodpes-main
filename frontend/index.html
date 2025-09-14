@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodPES - Hotel Restaurant</title>
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <!-- Logo -->
+        <div class="logo">
+          <div class="logo-icon">
+            <svg class="utensils-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 2v7c0 1.1.9 2 2 2h4v2H5c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h2v2c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-2h2c1.1 0 2-.9 2-2v-2c0-1.1-.9-2-2-2h-4V9h4c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2z"/>
+            </svg>
+          </div>
+          <div class="logo-text">
+            <h1 class="logo-title">FoodPES</h1>
+            <p class="logo-subtitle">Hotel Restaurant</p>
+          </div>
+        </div>
+
+        <!-- Cart Button -->
+        <button class="cart-button" id="cartButton">
+          <svg class="cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          Cart
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Category Filter -->
+  <div class="category-filter">
+    <div class="container">
+      <div class="category-buttons" id="categoryButtons">
+        <!-- Categories will be populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <div class="menu-header">
+        <h2 class="menu-title" id="menuTitle">Our Menu</h2>
+        <p class="menu-subtitle">Discover our delicious selection of freshly prepared dishes</p>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Menu items will be populated by JavaScript -->
+      </div>
+
+      <div class="no-items" id="noItems" style="display: none;">
+        <p>No items found in this category.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Cart Modal -->
+  <div class="modal-overlay" id="cartModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <svg class="shopping-bag-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          Your Order
+        </h3>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Customer Information -->
+        <div class="customer-info">
+          <h4>Customer Information</h4>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="customerName">Name</label>
+              <input type="text" id="customerName" placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label for="customerEmail">Email</label>
+              <input type="email" id="customerEmail" placeholder="your.email@example.com">
+            </div>
+            <div class="form-group">
+              <label for="tableNumber">Table No.</label>
+              <input type="text" id="tableNumber" placeholder="Table number">
+            </div>
+          </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <!-- Order Items -->
+        <div class="order-items">
+          <h4>Order Items</h4>
+          <div class="cart-items" id="cartItemsList">
+            <!-- Cart items will be populated by JavaScript -->
+          </div>
+        </div>
+
+        <div class="separator"></div>
+
+        <!-- Total and Actions -->
+        <div class="order-total">
+          <div class="total-amount">
+            <span>Total Amount:</span>
+            <!-- Corrected ID from 'totalPrice' to 'cartTotalAmount' -->
+            <span class="total-price" id="cartTotalAmount">$0.00</span>
+          </div>
+          <div class="order-actions">
+            <button class="clear-cart-btn" id="clearCartBtn">Clear Cart</button>
+            <button class="place-order-btn" id="placeOrderBtn">Place Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

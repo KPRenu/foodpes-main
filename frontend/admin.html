@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodPES Admin - Order Management</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <div class="admin-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="admin-logo">
+                    <div class="logo-icon">
+                        <svg class="utensils-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 2v7c0 1.1.9 2 2 2h4v2H5c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h2v2c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-2h2c1.1 0 2-.9 2-2v-2c0-1.1-.9-2-2-2h-4V9h4c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2z"/>
+                        </svg>
+                    </div>
+                    <div class="admin-title">
+                        <h1>FoodPES Admin</h1>
+                        <p>Restaurant Order Management</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Orders Section -->
+    <div class="admin-content">
+        <div class="container">
+            <div class="orders-header">
+                <h2>Incoming Orders</h2>
+                <p class="orders-stats">
+                    Total Orders: <span id="totalOrders">0</span> | 
+                    Pending: <span id="pendingOrders">0</span>
+                </p>
+            </div>
+
+            <div class="orders-container" id="ordersContainer">
+                <!-- Orders will be populated by JavaScript -->
+            </div>
+
+            <!-- No Orders State -->
+            <div class="no-orders" id="noOrders" style="display: none;">
+                <div class="no-orders-icon">
+                    <svg class="utensils-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 2v7c0 1.1.9 2 2 2h4v2H5c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h2v2c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2v-2h2c1.1 0 2-.9 2-2v-2c0-1.1-.9-2-2-2h-4V9h4c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2z"/>
+                    </svg>
+                </div>
+                <h3>No Orders Yet</h3>
+                <p>Orders will appear here when customers place them.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="admin-script.js"></script>
+</body>
+</html>
