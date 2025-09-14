@@ -466,7 +466,7 @@ async function placeOrder() {
   };
 
   try {
-      const response = await fetch('http://localhost:5000/api/orders', {
+      const response = await fetch('https://foodpes-main.onrender.com/api/orders', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',

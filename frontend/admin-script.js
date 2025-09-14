@@ -24,7 +24,7 @@ let state = {
   // Load orders from the backend API
   async function loadOrders() {
    try {
-     const response = await fetch('http://localhost:5000/api/orders');
+     const response = await fetch('https://foodpes-main.onrender.com/api/orders');
      if (!response.ok) {
        throw new Error('Failed to fetch orders from server.');
      }
@@ -176,7 +176,7 @@ let state = {
   // Update order status
   async function updateOrderStatus(orderId, newStatus) {
    try {
-     const response = await fetch(`http://localhost:5000/api/orders/${orderId}`, {
+     const response = await fetch(`https://foodpes-main.onrender.com/api/orders/${orderId}`, {
        method: 'PUT',
        headers: {
          'Content-Type': 'application/json',
